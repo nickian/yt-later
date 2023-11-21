@@ -1,0 +1,64 @@
+#settings {
+
+    #form-settings {
+        position: relative;
+        width: 75%;
+        margin: auto;
+        @media screen and (max-width: $medium) {
+            width: 98%;
+        }
+
+        #input-api-key {
+            transition: all 0.25s;
+            font-size: 40px;
+            padding: 20px;
+            width: 100%;
+            border: 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.0705882353);
+            border-radius: 10px;
+            padding-right: 105px;
+
+            &:focus {
+                outline: 0;
+                box-shadow: 0 0 10px rgba(255, 0, 0, 0.428);
+            }
+
+            @media screen and (max-width: $medium) {
+                width: 100%;
+                padding: 10px;
+                font-size: 16px;
+                padding-right: 55px;
+            }
+        }
+
+        button {
+            transition: all 0.25s;
+            position: absolute;
+            right: 0;
+            height: 100%;
+            width: 100px;
+            border: 0;
+            background: white;
+            color: #c1b6b6;
+            font-size: 20px;
+            font-weight: bold;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background: url('../img/save.svg');
+            background-size: 35px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            opacity: 0.1;
+            @media screen and (max-width: $medium) {
+                background-size: 20px;
+                width: 50px;
+            }
+            &:hover {
+                background-color: cyan;
+                opacity: 1;
+                cursor: pointer;
+                filter: invert(100%) brightness(150%);
+            }
+        }
+    }
+}

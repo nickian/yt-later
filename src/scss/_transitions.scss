@@ -1,0 +1,13 @@
+/* Initial state: invisible, fully transparent, and not taking up space */
+.fade-in {
+    display: none; /* Element does not take up space */
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+
+/* State when the class is active */
+.fade-in.active {
+    display: flex; /* Now takes up space */
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}

@@ -1,0 +1,19 @@
+// Mobile breakpoint
+$medium: 768px;
+
+// Fonts
+$font_family: Arial, Helvetica, sans-serif;
+
+// Shadow
+$box_shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+// Colors
+$primary_color: red;
+$hover_color: darken($primary_color, 15%);
+
+// Navigation
+$nav_background: #fff;
+$menu_link_color: #000;
+
+// Header Area
+$header_background: #ececec;

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YT-Later</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <nav>
+            <div id="logo">
+                <div id="logo-icon"></div>
+                <span>YT-Later</span>
+            </div>
+            <div id="menu">
+                <a href="#" id="menu-watch-later">Watch Later Playlist</a>
+                <a href="#" id="menu-sign-out">Sign Out</a>
+            </div>
+        </nav>
+        <header>
+            <!-- Settings Form -->
+            <div id="settings" class="fade-in">
+                <form id="form-settings">
+                    <input type="password" id="input-api-key" placeholder="Enter Your API Key">
+                    <button type="submit"></button>
+                </form>
+            </div>
+            <!-- Search Form -->
+            <div id="video-search" class="fade-in">
+                <form id="form-video-search">
+                    <input type="text" id="input-video-search" placeholder="Search for Videos">
+                    <button type="submit"></button>
+                </form>
+            </div>
+        </header>
+        <!-- Loading Spinner -->
+        <div id="loading"></div>
+        <!-- Errors -->
+        <div id="errors"></div>
+        <!-- Main content area -->
+        <main class="fade-in">
+            <div id="content" >
+                <h1 id="title-search"></h1>
+                <div id="filter">
+                    <label for="sort">Order By:</label>
+                    <select id="sort">
+                        <option value="relevance">Relevance</option>
+                        <option value="rating">Rating</option>
+                        <option value="date">Date</option>
+                        <option value="viewCount">View Count</option>
+                    </select>
+                </div>
+                <div id="results"></div>
+                <button id="load-more">Load More Results</button>
+            </div>
+        </main>
+        <!-- Modal content -->
+        <div id="video-detail" class="fade-in">
+            <button id="close-modal"></button>
+            <div id="video-detail-container"></div>
+        </div>
+        <!-- Include the JavaScript file combined and minified by Webpack -->
+        <script src="bundle.js"></script>
+    </body>
+</html>

@@ -1,0 +1,219 @@
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1#title-search {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+// The video thumbnail preview cards.
+a.video-result-preview {
+    background: #fff;
+    color: black;
+    text-decoration: none;
+    transition: all 0.25s;
+    box-shadow: $box_shadow;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 300px; 
+    width: 100%;
+    border: 3px solid white;
+    text-align: left;
+
+    @media screen and (max-width: 768px) {
+        max-width: none;
+    }
+    
+    &:hover {
+        border-color: $primary_color;
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 5px 0;
+        line-height: 1.3;
+    }
+    
+    p {
+        font-size: 12px;
+        margin: 5px 0;
+    }
+
+    .video-date {
+        color: #999;
+    }
+
+}
+
+.video-thumbnail-container {
+    position: relative;
+    width: 100%; /* Full width of the parent */
+    padding-top: 56.25%; /* Aspect ratio (Height/Width * 100%) */
+}
+
+.video-thumbnail {
+    background-size: cover !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+button#load-more {
+    display: none;
+    border: 0;
+    margin: 2em auto;
+    padding: 10px 25px;
+    background: $primary_color;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    &:hover {
+        background: darken($primary_color, 10%);
+        cursor: pointer;
+    }
+}
+
+#video-detail {
+
+    display: none;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background: rgb(0 0 0 / 70%);
+    overflow-y: scroll;
+
+    button#close-modal {
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 50px;
+        top: 25px;
+        right: 25px;
+        background: url('../img/times.svg');
+        background-color: #efefef;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 30px 30px;
+        border: 0;
+        border-radius: 50px;
+        &:hover {
+            background-color: cyan;
+            opacity: 1;
+            cursor: pointer;
+            filter: invert(100%) brightness(150%);
+        }
+        @media screen and (max-width: 768px) {
+            top: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            background-size: 15px 15px;
+        }  
+    }
+
+    #video-detail-container {
+
+        display: block;
+        margin: auto;
+        width: 100%;
+        max-width: 980px;
+        padding: 20px;
+        position: relative;
+        top: 100px;
+        background: #fff;
+        border-radius: 10px;
+        @media screen and (max-width: $medium) {
+            top: 60px;
+            padding: 10px;
+        }
+
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+            overflow: hidden;
+        }
+        
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        h3 {
+            font-size: 25px;
+            font-weight: bold;
+            margin: 1em 0;
+        }
+
+        .description {
+            background: #f1f1f1;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 15px;
+
+            .stats {
+                display: block;
+                margin: 0 0 15px 0;
+            }
+
+            p {
+                font-size: 14px;
+                margin: 0.75em 0;
+                strong {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        button.save-watch-later {
+            background: url('../img/plus-circle.svg');
+            padding: 15px 20px;
+            border-radius: 10px;
+            color: black;
+            background-repeat: no-repeat;
+            background-size: 25px 25px;
+            background-position: 14px;
+            padding-left: 50px;
+            margin-top: 25px;
+            border: 0;
+            background-color: #efefef;
+            font-size: 17px;
+            &:hover {
+                background-color: cyan;
+                cursor: pointer;
+                filter: invert(100%) brightness(150%);
+            }
+        }
+
+        button.save-watch-later.saved {
+            background: url('../img/check-circle.svg');
+            background-repeat: no-repeat;
+            background-size: 25px 25px;
+            background-position: 14px;
+            background-color: cyan;
+            filter: invert(100%) brightness(150%);
+        }
+
+    }
+
+}

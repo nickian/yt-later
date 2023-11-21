@@ -1,0 +1,105 @@
+#form-video-search {
+
+    position: relative;
+    width: 75%;
+    margin: auto;
+    @media screen and (max-width: $medium) {
+        width: 98%;
+    }
+
+    #input-video-search {
+        transition: all 0.5s;
+        font-size: 40px;
+        padding: 20px;
+        width: 100%;
+        border: 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.0705882353);
+        border-radius: 10px;
+        padding-right: 105px;
+        
+        &:focus {
+            outline: 0;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.428);
+        }
+
+        @media screen and (max-width: $medium) {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+    }
+
+    button {
+        transition: all 0.5s;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 100px;
+        border: 0;
+        background: white;
+        color: #c1b6b6;
+        font-size: 20px;
+        font-weight: bold;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background: url('../img/search.svg');
+        background-size: 35px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        opacity: 0.1;
+        @media screen and (max-width: $medium) {
+            background-size: 20px;
+            width: 50px;
+        }
+        &:hover {
+            background-color: cyan;
+            opacity: 1;
+            cursor: pointer;
+            filter: invert(100%) brightness(150%);
+        }
+    }
+
+}
+
+#input-video-search {
+    transition: all 0.5s;
+    font-size: 40px;
+    padding: 20px;
+    width: 75%;
+    border: 0;
+    box-shadow: 0 0 10px #00000012;
+    border-radius: 10px;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 10px #ff000060;
+    }
+
+    @media screen and (max-width: $medium) {
+        width: 100%;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+}
+
+#filter {
+    display: none;
+    width: 100%;
+    padding: 0 0 20px 0;
+
+    label {
+        margin: 0 10px;
+        font-weight: bold;
+    }
+
+    select {
+        font-size: 18px;
+        padding: 5px 10px;
+        border: 0;
+        box-shadow: $box_shadow;
+        border-radius: 10px;
+        color: $primary_color;
+    }
+}
