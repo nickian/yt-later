@@ -1,5 +1,7 @@
 # YT-Later
 
+![Screenshot](screenshot.jpg )
+
 A purely front-end javascript web application that allows you to search YouTube for videos and add them to a "watch later" playlist that's stored in your browser's local storage.
 
 View a [live demo here](https://nick.do/yt-later).
